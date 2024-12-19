@@ -1,0 +1,205 @@
+# baseURI: https://example.org/diss-liu/iom_instance_loin
+# imports: https://w3id.org/loin
+
+@prefix Container: <https://standards.iso.org/iso/21597/-1/ed-1/en/Container#> .
+@prefix Linkset: <https://standards.iso.org/iso/21597/-1/ed-1/en/Linkset#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dt: <https://w3id.org/dt#> .
+@prefix ext4loin: <https://w3id.org/loin/v3/loinext#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1#> .
+@prefix icdd4loin: <https://w3id.org/loin/v2/icdd#> .
+@prefix ids4loin: <https://w3id.org/loin/v2/ids#> .
+@prefix loin: <https://w3id.org/loin#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix instance4loin: <https://example.org/diss-liu/iom_instance_loin#>.
+
+<https://example.org/diss-liu/iom_instance_loin>
+  rdf:type owl:Ontology ;
+  dc:created "2023-01-30"^^xsd:date ;
+  dc:creator [
+      rdf:type schema:Person ;
+      schema:email <mailto:liu.liu-m6r@rub.de> ;
+      schema:identifier <https://orcid.org/0000-0001-5907-7609> ;
+      schema:memberOf [
+          schema:identifier <https://www.inf.bi.ruhr-uni-bochum.de/iib/lehrstuhl/mitarbeiter/liu_liu.html.en> ;
+          schema:name "Ruhr University Bochum" ;
+        ] ;
+      schema:name "Liu Liu" ;
+    ] ;
+  dc:description "The instances are based on examples of BS EN 17412-1 (2020), ISO 7817-1(2024), ISO 19650 ff, and research projects BIM4Infra, AMSFree, BIM4AMS"@en ;
+  dc:license <https://creativecommons.org/licenses/by/4.0/> ;
+  dc:publisher [
+      rdf:type schema:Organization ;
+      schema:identifier <https://www.inf.bi.rub.de> ;
+      schema:name "Chair of Computing in Engineering, Ruhr University Bochum" ;
+      schema:parentOrganization [
+          rdf:type schema:Organization ;
+          schema:name "Ruhr University Bochum, Germany" ;
+        ] ;
+    ] ;
+  dc:rights "Copyright 2023 by Chair of Computing in Engineering, Ruhr University Bochum" ;
+  dc:title "LOIN Instances related to the Infrastructure Operation and Maintenance Activities "@en ;
+  vann:preferredNamespacePrefix "instance4loin" ;
+  vann:preferredNamespaceUri "https://example.org/diss-liu/iom_instance_loin#" ;
+  owl:imports <https://w3id.org/loin> ;
+  owl:versionInfo "3.0" ;
+.
+
+instance4loin:ClassificationSystem
+  rdf:type loin:BreakdownStructureType ;
+  rdfs:comment "An example of breakdown structure type according to ISO 7817-1 (2024)"@en ;
+  rdfs:label "Classification system"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:Doc_Handdrawn_Sketches
+  rdf:type loin:DocumentContent ;
+  rdfs:comment "Documents such as such as initial sketches, site plans according to notes of ISO 7817-1 (2024)"@en ;
+  rdfs:label "Handdrawn sketches"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:Doc_Hard_Copy
+  rdf:type loin:DocumentContent ;
+  rdfs:comment "Documents of geometrical information or alphanumerical information can also be considered as documents according to notes of ISO 7817-1 (2024)."@en ;
+  rdfs:label "Hand copy"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:Doc_Manual
+  rdf:type loin:DocumentContent ;
+  rdfs:comment "Documents such as maintenance and user manuals according to notes of ISO 7817-1 (2024)"@en ;
+  rdfs:label "Manual" ;
+  vs:term_status "stable" ;
+.
+instance4loin:Doc_Photograph
+  rdf:type loin:DocumentContent ;
+  rdfs:comment "Documents such as records of work done, records of existing conditions according to notes of ISO 7817-1 (2024)"@en ;
+  rdfs:label "Photograph" ;
+  vs:term_status "stable" ;
+.
+instance4loin:Doc_Report
+  rdf:type loin:DocumentContent ;
+  rdfs:comment "Documents such as geotechnical reports, reports of existing building conditions, soil surveys, pre calculations according to notes of ISO 7817-1 (2024)"@en ;
+  rdfs:label "Report" ;
+  vs:term_status "stable" ;
+.
+instance4loin:Doc_Signed_Document
+  rdf:type loin:DocumentContent ;
+  rdfs:comment "Documents such as test certificates, insurance policies, delivery notes according to notes of ISO 7817-1 (2024)"@en ;
+  rdfs:label "Signed document"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:Doc_Specification
+  rdf:type loin:DocumentContent ;
+  rdfs:comment "Documents such as technical specifications according to notes according to notes of ISO 7817-1 (2024)"@en ;
+  rdfs:label "Specification"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:EngineeringPrinciple
+  rdf:type loin:BreakdownStructureType ;
+  rdfs:comment "An example of breakdown structure type according to ISO 7817-1 (2024)"@en ;
+  rdfs:label "Engineering principle"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:FederationStrategy
+  rdf:type loin:BreakdownStructureType ;
+  rdfs:comment "An example of breakdown structure type according to ISO 7817-1 (2024)"@en ;
+  rdfs:label "Federation strategy"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:Functional
+  rdf:type loin:BreakdownStructureType ;
+  rdfs:comment "An example of breakdown structure type according to ISO 7817-1 (2024)"@en ;
+  rdfs:label "Functional structure"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:Provided_As_Information
+  rdf:type loin:DocumentPurpose ;
+  rdfs:comment "The document delivered by Inquirer as percondition or information"@en ;
+  rdfs:label "The document provided as information"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:Required_For_Approval
+  rdf:type loin:DocumentPurpose ;
+  rdfs:comment "The document required by deliverer is for getting approval"@en ;
+  rdfs:label "document required for approval"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:Required_with_Supplement
+  rdf:type loin:DocumentPurpose ;
+  rdfs:comment "The document required by deliverer with supplement of information"@en ;
+  rdfs:label "document required with supplement"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:Semantic
+  rdf:type loin:BreakdownStructureType ;
+  rdfs:comment "An example of breakdown structure type according to ISO 7817-1 (2024)"@en ;
+  rdfs:label "Semantic structure"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:Spatial
+  rdf:type loin:BreakdownStructureType ;
+  rdfs:comment "An example of breakdown structure type according to ISO 7817-1 (2024)"@en ;
+  rdfs:label "Spatial structure"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:Used_As_Template
+  rdf:type loin:DocumentPurpose ;
+  rdfs:comment "The document required by deliverer should be used as template"@en ;
+  rdfs:label "The document as template"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:coordination
+  rdf:type loin:Purpose ;
+  rdfs:comment "coordination, an example of IDM purpose from BS EN 17412-1 (2020) - Annex B"@en ;
+  rdfs:label "Coordination"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:costEstimation
+  rdf:type loin:Purpose ;
+  rdfs:comment "Cost estimation, an example of IDM purpose from BS EN 17412-1 (2020) - Annex B"@en ;
+  rdfs:label "Cost estimation"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:detailedDesign
+  rdf:type loin:InformationDeliveryMilestone ;
+  rdfs:comment "Detailed design, an example of IDM purpose from BS EN 17412-1 (2020) - Annex B"@en ;
+  rdfs:label "Detailed design"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:finalDesign
+  rdf:type loin:InformationDeliveryMilestone ;
+  rdfs:comment "Final design, an example of IDM purpose from BS EN 17412-1 (2020) - Annex B"@en ;
+  rdfs:label "Final design"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:fireSmokeSimulation
+  rdf:type loin:Purpose ;
+  rdfs:comment "Fire and smoke simulation, an example of IDM purpose from BS EN 17412-1 (2020) - Annex B"@en ;
+  rdfs:label "Fire and smoke simulation"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:preliminaryDesign
+  rdf:type loin:InformationDeliveryMilestone ;
+  rdfs:comment "Preliminary design, an example of IDM information delivery milestone from ISO 7817-1 (2024) - Annex B"@en ;
+  rdfs:label "Preliminary design" ;
+  vs:term_status "stable" ;
+.
+instance4loin:structuralAnalysis
+  rdf:type loin:Purpose ;
+  rdfs:comment "Structural analysis, an example of IDM purpose from ISO 7817-1 (2024) - Annex B"@en ;
+  rdfs:label "Structural analysis"@en ;
+  vs:term_status "stable" ;
+.
+instance4loin:visualization
+  rdf:type loin:Purpose ;
+  rdfs:comment "Visualization, an example of IDM purpose from ISO 7817-1 (2024) - Annex B"@en ;
+  rdfs:label "Visualization" ;
+  vs:term_status "stable" ;
+.
+
